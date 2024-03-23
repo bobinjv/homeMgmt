@@ -1,0 +1,11 @@
+.popup-container{
+    padding: 12px 30px;
+}
+mat-form-field{
+    min-width: 300px;
+}
+.btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

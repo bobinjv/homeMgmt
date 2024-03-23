@@ -16,14 +16,14 @@ export class ExecutiveService {
   }
 
   public getExecutive(id: string){
-    return this._http.get(environment.apiUrl+'/student/get')
+    return this._http.get(environment.apiUrl+'/execuitiveviewbyid/'+id)
   }
 
-  public addNewStudent(data: any){
-    return this._http.post(environment.apiUrl+'/student/register', data)
+  public addNewExecutive(data: any){
+    return this._http.post(environment.apiUrl+'/addexecutives', data)
   }
 
-  public editStudent(data: any, id:any){
-    return this._http.patch(environment.apiUrl+'/student/patch/'+id, data)
+  public editExecutive(data: any){
+    return this._http.post(environment.apiUrl+'/updateexecutives', data)
   }
 }

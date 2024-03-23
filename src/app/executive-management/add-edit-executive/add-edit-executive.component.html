@@ -1,0 +1,36 @@
+<div class="popup-container">
+    <div>
+        <h2>{{title}}</h2>
+    </div>
+    <div [formGroup]="regForm">
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Phone Number</mat-label>
+            <input type="number" matInput formControlName="phone">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Date of Birth</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="dob">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Designation</mat-label>
+            <input matInput formControlName="designation">
+        </mat-form-field>
+        <div class="btn-container">
+            <button (click)="submitForm()">Submit</button>
+        </div>        
+    </div>
+</div>
